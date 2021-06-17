@@ -13,9 +13,10 @@ h1 {
   text-align: center;
 }
 .card {
-  background: linear-gradient(185deg, rgba(128, 128, 128, 0.87), grey);
+  background-color: rgba(128, 128, 128, 0.87);
   height: 6rem;
-  padding: 1rem;
+  padding: 1rem 1rem;
+
   margin: 9rem 8rem 4rem 2rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3rem;
@@ -25,21 +26,21 @@ h1 {
 form.example input[type="text"] {
   outline: none;
   font-size: 2rem;
-  border: 1px solid grey;
+  color: whitesmoke;
+  border: none;
   float: left;
   width: 90%;
-  background: rgba(128, 128, 128, 0.568);
+  background: rgba(138, 137, 137, 0.466);
+  /* background-color: rgba(128, 128, 128, 0.87); */
 }
 
 form.example button {
   float: left;
   width: 10%;
-  padding: 1rem;
+  border: none;
   background: none;
   color: white;
-  font-size: 14px;
-  border: 1px solid grey;
-  border-left: none;
+  font-size: 18px;
   cursor: pointer;
 }
 form.example::after {
