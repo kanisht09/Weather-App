@@ -535,6 +535,3 @@ console.log(f);
 
 const g = document.querySelector(".card");
 // g.classList.add("hidden");
-
-const h = document.querySelector(".search-bar");
-console.log(h);
