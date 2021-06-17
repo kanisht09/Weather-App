@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0rem;
+}
+
+.color {
+  background-color: aquamarine;
+}
+.intro {
+  text-align: center;
+  font-size: 5rem;
+  margin-top: 2rem;
+  line-height: 4rem;
+}
+.card {
+  background: linear-gradient(185deg, rgba(128, 128, 128, 0.87), grey);
+  height: 6rem;
+  padding: 1rem;
+  margin: 9rem 8rem 4rem 2rem;
+  font-family: monospace;
+  font-size: 3rem;
+  border-radius: 1rem;
+}
+
+form.example input[type="text"] {
+  outline: none;
+  font-size: 2rem;
+  border: 1px solid grey;
+  float: left;
+  width: 90%;
+  background: rgba(128, 128, 128, 0.568);
+}
+
+form.example button {
+  float: left;
+  width: 10%;
+  padding: 1rem;
+  background: none;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+::placeholder {
+  color: wheat;
+  opacity: 1;
+}
+.hidden {
+  display: none;
+}
