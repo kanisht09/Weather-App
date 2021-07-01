@@ -516,11 +516,12 @@ for (const [day, { open, close }] of entries) {
 }
 
 // Coding Challenge #2  Date : 17/06/2021
-
+// 1.
 for (const [number, teamname] of game.scored.entries()) {
   console.log(`Goal ${number + 1}: ${teamname}`);
 }
 
+// 2.
 let sum = 0;
 const valueS = Object.values(game.odds);
 for (const x of valueS) {
@@ -529,9 +530,156 @@ for (const x of valueS) {
 const AVG = sum / valueS.length;
 console.log(AVG);
 
-const f = document.querySelector("body");
-f.classList.add("color");
-console.log(f);
+// 3.
+const xValues = Object.entries(game.odds);
+// console.log(xValues);
 
-const g = document.querySelector(".card");
-// g.classList.add("hidden");
+for (const [x, y] of xValues) {
+  const temStr = x === "x" ? "draw" : `victory ${game[x]}`;
+  console.log(`Odd of ${temStr} ${y}`);
+}
+
+const scorers = {};
+for (const x of game.scored) {
+  scorers[x] ? scorers[x]++ : (scorers[x] = 1);
+}
+console.log(scorers);
+
+// Set is an iterable
+
+const orderSet = new Set(["hello", "hi", "hecco", "tdhd", "hi", "hii"]); // check sorting and uniqueness
+// not sorted
+console.log(orderSet);
+
+console.log(new Set("Hello"));
+console.log(orderSet.length);
+console.log(orderSet.has("hi"));
+console.log(orderSet.has("golu"));
+orderSet.add("He");
+orderSet.add("He");
+orderSet.delete("hello");
+orderSet.delete("golu"); // doest exists but still tried to delete no error
+// orderSet.clear();
+
+for (const s of orderSet) {
+  console.log(s);
+}
+console.log(orderSet);
+
+const staff = ["waiter", "waiter", "stuff", "chef", "stuff"];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+const rest = new Map();
+rest.set("name", "Classic Italiano");
+rest.set(1, "Firenze, Italy");
+rest.set(2, "Lisbon,Portugal");
+// no need of writting rest then set for each property again and again instead write it at once
+rest
+  .set("categories", ["Italian", "Pizzeria", "Vegetarian", "Organic"])
+  .set("open", 11)
+  .set("close", 23)
+  .set(true, "We are open :D")
+  .set(false, "We are closed :(");
+console.log(rest);
+
+console.log(rest.get("name"));
+console.log(rest.get(true));
+
+const time = 21;
+console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
+
+console.log(rest.has("categories"));
+rest.delete(2);
+// rest.clear();
+
+// we can set arras as key
+
+console.log(rest);
+// wont work althoouh we wrote it in the same way while setting
+// rest.set([1, 2],"Test"));
+// console.log(rest);
+// console.log(rest.get([1, 2]));
+
+// this works
+const arrr = [1, 2];
+rest.set(arrr, "Test");
+
+console.log(rest.get(arrr));
+
+// deleting object key is not that efficient
+
+rest.set(document.querySelector("h1"), "heading");
+rest.set(document.querySelector(".search-bar"), "searching");
+
+console.log(rest.size); // then number of keys
+
+// better method creating a map (Avoiding the usage of set method)
+const question = new Map([
+  ["question", "What is the best programming language in the world ?"],
+  [1, "C"],
+  [2, "Java"],
+  [3, "JavaScript"],
+  ["correct", 3],
+  [true, "Correct 🎉"],
+  [false, "Try again 😅"],
+]);
+33;
+console.log(question);
+
+// The above structure is found below
+
+// converts objects to map
+
+console.log(Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+// Quiz app
+
+console.log(question.get("question"));
+for (const [key, value] of question) {
+  if (typeof key === "number") console.log(`Option ${key} : ${value}`);
+}
+
+// const answer = Number(prompt("Your answer"));
+// console.log(question.get(answer === question.get("correct")));
+// console.log(answer);
+
+// convert map into an array
+
+console.log([...question]);
+
+// coding challenge #3
+
+const gameEvents = new Map([
+  [17, "⚽ GOAL"],
+  [36, "🔄 Substitution"],
+  [47, "⚽ GOAL"],
+  [61, "🔄 Substitution"],
+  [64, "🟨 Yellow card"],
+  [69, "🟥 Red card"],
+  [70, "🔄 Substitution"],
+  [72, "🔄 Substitution"],
+  [76, "⚽ GOAL"],
+  [80, "⚽ GOAL"],
+  [92, "🟨 Yellow card"],
+]);
+// 1.
+// const events = [...new Set(gameEvents.values())];
+// console.log(events);
+// 2.
+// gameEvents.delete(64);
+// console.log(gameEvents);
+// 3.
+const timex = [...gameEvents.keys()].pop();
+console.log(timex);
+console.log(
+  `An event happened, on average, every ${timex / gameEvents.size} minutes`
+);
+// 4.
+for (const [x, y] of gameEvents) {
+  const timeR = x;
+  const stringE = timeR > 45 ? "[SECOND HALF]" : "[FIRST HALF]";
+  console.log(`${stringE} ${x}:${y}`);
+}
+// Lecture : Working with strings - Part-1

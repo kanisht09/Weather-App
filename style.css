@@ -1,28 +1,30 @@
 * {
   box-sizing: border-box;
   margin: 0rem;
+  padding: 0rem;
 }
-
 body {
-  background-color: aquamarine;
+  background-color: #77acf1;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
+  font-weight: 650;
+  color: aliceblue;
 }
 .text-center {
   text-align: center;
 }
-.card {
+.search-bar {
   background-color: rgba(128, 128, 128, 0.87);
   height: 6rem;
   padding: 1rem 1rem;
-
-  margin: 9rem 8rem 4rem 2rem;
+  border: solid 1px black;
+  margin: 9rem 8rem 4rem 4rem;
   font-family: Arial, Helvetica, sans-serif;
+  /* box-shadow:; */
   font-size: 3rem;
   border-radius: 1rem;
 }
-
 form.example input[type="text"] {
   outline: none;
   font-size: 2rem;
@@ -31,9 +33,7 @@ form.example input[type="text"] {
   float: left;
   width: 90%;
   background: rgba(138, 137, 137, 0.466);
-  /* background-color: rgba(128, 128, 128, 0.87); */
 }
-
 form.example button {
   float: left;
   width: 10%;
@@ -52,6 +52,72 @@ form.example::after {
   color: wheat;
   opacity: 1;
 }
+.card-body {
+  margin-left: 20rem;
+  /* background-color: #f5a962; */
+  /*
+    for max width 300 px
+     width: 25rem;
+     margin-left:2rem;
+  */
+  /*
+    for max width 320 px
+     width: 28 rem;
+    for max width 
+  */
+
+  /*
+    for max width 360 px
+     width: 31 rem;
+    for max width 
+  */
+
+  /*
+    for max width 375 px
+     width: 33 rem;
+    for max width 
+  */
+
+  /*
+    for max width 414 px
+     width: 37 rem;
+    for max width 
+  */
+
+  /*
+    for max width 540 px
+     width: 45 rem;
+     margin-left : 4 rem also add to the search bar  
+  */
+
+  /*
+    for max width 768 px
+     width: 68 rem;
+     margin-left : 4 rem also add to the search bar
+  */
+
+  /*
+    for max width 1024 px :
+    margin-top: 12rem;
+    height: 31rem;
+    width: 78rem;
+    margin-left: 11rem;
+    4 rem also add to the search bar  
+  */
+
+  /* height: 20rem;
+  width: 93rem;
+  margin-left: 3rem; */
+  /* height: 20rem;
+  width: 168rem;
+  margin-left: 4rem; */
+}
+footer {
+  height: 4rem;
+  width: 4rem;
+  padding: 4rem;
+}
+
 .hidden {
   display: none;
 }
