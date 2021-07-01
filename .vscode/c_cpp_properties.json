@@ -9,7 +9,7 @@
       "cStandard": "c17",
       "cppStandard": "c++17",
       "intelliSenseMode": "gcc-x64",
-      "compilerPath": "E:/Program Files (x86)/CodeBlocks/MinGW/bin/gcc"
+      "compilerPath": "C:\\MinGW\\bin\\gcc"
     }
   ],
   "version": 4
